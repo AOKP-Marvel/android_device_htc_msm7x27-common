@@ -2,12 +2,13 @@
 <!--
 **
 ** Copyright 2009, The Android Open Source Project
+** Copyright 2012, PoPfan Team
 **
 ** Licensed under the Apache License, Version 2.0 (the "License")
 ** you may not use this file except in compliance with the License.
 ** You may obtain a copy of the License at
 **
-**     http://www.apache.org/licenses/LICENSE-2.0
+** http://www.apache.org/licenses/LICENSE-2.0
 **
 ** Unless required by applicable law or agreed to in writing, software
 ** distributed under the License is distributed on an "AS IS" BASIS,
@@ -27,7 +28,6 @@
        are totally dependent on the platform and can vary
        significantly, so should be measured on the shipping platform
        with a power meter. -->
-  <!-- All values are in mAh except as noted -->
   <item name="none">0</item>
   <item name="screen.on">100</item>
   <item name="screen.full">160</item>

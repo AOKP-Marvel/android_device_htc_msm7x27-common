@@ -44,9 +44,13 @@
 
          <!-- USB interfaces.  If the device doesn't want to support tething over USB this should
          be empty.  An example would be "usb.*" -->
+    <!-- Boolean indicating whether the start command should be called on the wireless interface
+         when starting the SoftAp-->
+    <bool name="config_wifiApStartInterface">true</bool>
+
     <string-array translatable="false" name="config_tether_usb_regexs">
-         <item>"rndis\\d"</item>
-         <item>"usb\\d"</item>
+        <item>"rndis\\d"</item>
+        <item>"usb\\d"</item>
     </string-array>
 
    <!-- List of regexpressions describing the interface (if any) that represent tetherable
@@ -62,7 +66,14 @@ should be empty. -->
     <string-array translatable="false" name="config_tether_bluetooth_regexs">
         <item>"bnep\\d"</item>
     </string-array>
-
+    <string-array translatable="false" name="networkAttributes">
+        <item>"wifi,1,1,1,-1,true"</item>
+        <item>"mobile,0,0,0,-1,true"</item>
+        <item>"mobile_mms,2,0,2,60000,true"</item>
+        <item>"mobile_supl,3,0,2,60000,true"</item>
+        <item>"mobile_dun,4,0,3,60000,true"</item>
+        <item>"mobile_hipri,5,0,3,60000,true"</item>
+    </string-array>
     <!-- Array of ConnectivityManager.TYPE_xxxx values allowable for tethering -->
     <!-- Common options are [1, 4] for TYPE_WIFI and TYPE_MOBILE_DUN or
     <!== [0,1,5,7] for TYPE_MOBILE, TYPE_WIFI, TYPE_MOBILE_HIPRI and TYPE_BLUETOOTH -->
@@ -80,7 +91,7 @@ should be empty. -->
  
     <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
-    <bool name="config_automatic_brightness_available">true</bool> 
+
 
     <!-- Control whether being in the desk dock (and powered) always
          keeps the screen on.  By default it stays on when plugged in to
