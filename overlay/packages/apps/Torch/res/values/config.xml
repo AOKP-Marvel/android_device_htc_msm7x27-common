@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /*
-**
-** Copyright 2008, The Android Open Source Project
+** Copyright 2011, The CyanogenMod Project
 **
 ** Licensed under the Apache License, Version 2.0 (the "License");
 ** you may not use this file except in compliance with the License.
@@ -18,10 +17,10 @@
 */
 -->
 
+<!-- These resources are around just to allow their values to be customized
+     for different hardware and product builds. -->
 <resources>
-    <!-- Preferable keyboard height in absolute scale: 1.285in -->
-    <!-- This keyboardHeight value should match with keyboard-heights.xml -->
-    <dimen name="keyboardHeight">205.6dp</dimen>
-
-    <integer name="max_more_suggestions_row">4</integer>
+    <!-- Full path to the sysfs toggle -->
+	<add-resource type="string" name="flashDevice"></add-resource>
+    <string name="flashDevice">/dev/ledflash</string>
 </resources>
